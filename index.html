@@ -9,19 +9,17 @@
     <meta name="description" content="Mnazz Website Is Not Available Right Now">
     <meta property="og:image" content="https://mnazz.com/thumbnail.png">
     <script>
-        function detectMobile() {
-        const isMobile = /iPhone|iPad|iPod|Android|BlackBerry|webOS|Windows Phone/i.test(navigator.userAgent);
-        return isMobile;
-        }
-
-        function redirectMobile() {
-        if (detectMobile()) {
-            window.location.href = "https://mnazz.com/mcomingsoon";
+        function detectmob() {
+        if(window.innerWidth <= 800 || window.innerHeight <= 600) {
+            return true;
+        } else {
+            return false;
         }
         }
 
-window.onload = redirectMobile;
-
+        if (detectmob()){
+            window.location.href = "mcomingsoon.html";
+        }
     </script>
 </head>
 <body>
